@@ -21,10 +21,10 @@ class Ship:
 
         if row1 == row2:
             for col in range(min(col1, col2), max(col1, col2) + 1):
-                self.decks.append(Deck(row1, col))
+                self.decks.append(Deck(row1, col, True))
         elif col1 == col2:
             for row in range(min(row1, row2), max(row1, row2) + 1):
-                self.decks.append(Deck(row, col1))
+                self.decks.append(Deck(row, col1, True))
 
     def get_deck(self, row: int, column: int) -> Deck | None:
         for deck in self.decks:
